@@ -13,9 +13,10 @@
 .home__adding{
     display: flex;
     flex-direction: column;
-    .home__adding-btn{}
+
     .home__adding-text--empty{
         margin-top: 80px;
+        position: absolute;
     }
 
 }

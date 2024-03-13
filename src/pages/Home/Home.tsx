@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import CertificateAdding from '../../components/CertificateAdding';
 import { Certificate } from '../../types/types';
@@ -9,18 +9,31 @@ const handleCertificateAdded = (cert: Certificate) => {
 };
 
 const Home: FC = () => {
+  const [isCert, setIsCert] = useState<boolean>(false);
+
   return (
     <main>
       <div className="home">
         <div className="home-wrap">
           <div className="home__adding">
-            <button className="general-btn home__adding-btn">Додати</button>
-            <p className="home__adding-text--empty">
-              Немає жодного сертифікату
-            </p>
+            <button
+              onClick={() => setIsCert(!isCert)}
+              className="general-btn home__adding-btn"
+            >
+              {isCert ? 'Назад' : 'Додати'}
+            </button>
+            {isCert ? (
+              ''
+            ) : (
+              <p className="home__adding-text--empty">
+                Немає жодного сертифікату
+              </p>
+            )}
           </div>
           <div>
-            <CertificateAdding onCertificateAdded={handleCertificateAdded} />
+            {isCert && (
+              <CertificateAdding onCertificateAdded={handleCertificateAdded} />
+            )}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { CertificateList, Certificate } from '../types/types';
+import { CertificateList, Certificate } from '../../types/types';
 
 interface Props {
   certificates: CertificateList;

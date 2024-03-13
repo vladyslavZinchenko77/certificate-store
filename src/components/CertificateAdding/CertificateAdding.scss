@@ -1,0 +1,10 @@
+.drop{
+    border: 2px dashed #ccc;
+    padding: 80px 40px 60px 40px;
+    text-align: center;
+    cursor: pointer;
+    .drop_text{}
+    .drop_btn{
+        margin-top: 24px;
+    }
+}

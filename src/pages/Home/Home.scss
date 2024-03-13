@@ -1,0 +1,21 @@
+.home{
+    display: flex;
+    justify-content: center;
+    
+        .home-wrap{
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+        }
+}
+
+.home__adding{
+    display: flex;
+    flex-direction: column;
+    .home__adding-btn{}
+    .home__adding-text--empty{
+        margin-top: 80px;
+    }
+
+}

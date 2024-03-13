@@ -1,9 +1,7 @@
 function App() {
   return (
     <>
-      <main>
-        <button>Додати</button>
-      </main>
+      <main>App</main>
     </>
   );
 }
